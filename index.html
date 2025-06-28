@@ -3,95 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratik - Data Scientist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Pratik | Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #0d9488; /* Teal */
+            --secondary-color: #475569; /* Slate */
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-background: #ffffff;
+            --border-color: #e2e8f0;
+        }
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.8;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #343a40;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
         .container {
-            max-width: 960px;
-            margin: 60px auto;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 1024px;
+            margin: 80px auto;
+            padding: 50px;
+            background: var(--card-background);
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
         }
         header {
             text-align: center;
-            padding-bottom: 50px;
-            margin-bottom: 50px;
-            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 40px;
+            margin-bottom: 60px;
         }
         header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5em;
-            font-weight: 700;
-            color: #212529;
+            font-family: 'Lora', serif;
+            font-size: 4em;
+            font-weight: 600;
+            color: var(--text-color);
             margin: 0;
         }
         header p {
-            font-size: 1.3em;
-            color: #6c757d;
-            margin-top: 10px;
+            font-size: 1.25em;
+            color: var(--secondary-color);
+            margin-top: 15px;
         }
         h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5em;
+            font-family: 'Inter', sans-serif;
+            font-size: 2.8em;
             font-weight: 700;
-            color: #343a40;
-            margin-bottom: 40px;
+            color: var(--text-color);
+            margin-bottom: 50px;
             text-align: center;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 20px auto 0;
+            border-radius: 2px;
         }
         .section-content {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
         .project, .blog-post {
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease-in-out;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project:hover, .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            border-color: #007bff;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
         }
         .project h3, .blog-post h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8em;
-            margin: 0 0 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.7em;
+            margin: 0 0 15px;
         }
         .project a, .blog-post a {
-            color: #007bff;
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
         }
         .project a:hover, .blog-post a:hover {
             text-decoration: underline;
         }
+        .tags {
+            margin-top: 20px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e0f2f1;
+            color: #00796b;
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
         footer {
             text-align: center;
-            padding-top: 30px;
-            margin-top: 50px;
-            border-top: 1px solid #e9ecef;
-            color: #6c757d;
+            padding-top: 40px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            color: var(--secondary-color);
+        }
+        .social-links {
+            margin-top: 25px;
         }
         .social-links a {
-            margin: 0 20px;
-            color: #007bff;
+            margin: 0 18px;
+            color: var(--secondary-color);
             font-size: 1.8em;
             transition: color 0.3s ease;
         }
         .social-links a:hover {
-            color: #0056b3;
+            color: var(--primary-color);
         }
     </style>
 </head>
@@ -99,66 +133,77 @@
     <div class="container">
         <header>
             <h1>Pratik</h1>
-            <p>Data Scientist | Machine Learning Engineer | Blogger</p>
+            <p>Data Scientist | Machine Learning Engineer | Technical Writer</p>
         </header>
 
         <section id="about">
             <h2>About Me</h2>
-            <div class="section-content">
+            <div class="section-content" style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
                 <p>
-                    I am a dedicated and passionate Data Scientist with a strong background in machine learning and data analysis. My expertise lies in developing innovative, data-driven solutions to complex challenges. I am committed to sharing my knowledge and insights with the broader community through my writing.
+                    I am a results-driven Data Scientist specializing in machine learning, statistical modeling, and data storytelling. My passion lies in transforming complex datasets into actionable insights and building intelligent systems that solve real-world problems. I am a firm believer in the power of open-source and enjoy sharing my findings through technical articles.
                 </p>
             </div>
         </section>
 
         <section id="projects">
-            <h2>My Projects</h2>
+            <h2>Signature Projects</h2>
             <div class="section-content">
                 <div class="project">
-                    <h3><a href="#">Project One: Predictive Analytics Model</a></h3>
-                    <p>Developed a predictive model to forecast sales trends, utilizing machine learning algorithms and time-series analysis. This project involved extensive data preprocessing, feature engineering, and model evaluation to achieve high accuracy.</p>
+                    <h3><a href="#">Real-Time Anomaly Detection in Financial Transactions</a></h3>
+                    <p>Engineered a high-performance streaming pipeline to detect fraudulent activities in real-time. The system leverages unsupervised learning models to adapt to evolving fraud patterns, significantly reducing false positives.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Kafka</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Isolation Forest</span>
+                    </div>
                 </div>
                 <div class="project">
-                    <h3><a href="#">Project Two: Customer Segmentation Analysis</a></h3>
-                    <p>Led a customer segmentation project to identify distinct customer groups based on purchasing behavior. The insights from this analysis enabled targeted marketing strategies, resulting in a significant increase in customer engagement.</p>
-                </div>
-                <div class="project">
-                    <h3><a href="#">Project Three: Natural Language Processing for Sentiment Analysis</a></h3>
-                    <p>Built an NLP-powered sentiment analysis tool to gauge public opinion from social media data. This project required advanced techniques in text mining and sentiment classification to deliver actionable insights for brand management.</p>
+                    <h3><a href="#">Customer Lifetime Value (CLV) Prediction</a></h3>
+                    <p>Developed a probabilistic model to forecast the CLV of customers for an e-commerce platform. The insights are now a core component of the company's retention marketing strategy, leading to a 15% increase in repeat purchases.</p>
+                    <div class="tags">
+                        <span class="tag">R</span>
+                        <span class="tag">Bayesian Modeling</span>
+                        <span class="tag">Gradio</span>
+                        <span class="tag">Marketing Analytics</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="blog">
-            <h2>Latest Articles</h2>
+            <h2>Recent Writings</h2>
             <div class="section-content">
                 <div class="blog-post">
-                    <h3><a href="#">The Future of AI in Data Science</a></h3>
-                    <p>An in-depth look at the transformative impact of artificial intelligence on the field of data science. This article explores emerging trends, challenges, and opportunities for professionals and enthusiasts alike.</p>
-                </div>
-                <div class="blog-post">
-                    <h3><a href="#">A Guide to Effective Data Visualization</a></h3>
-                    <p>This post provides practical tips and best practices for creating compelling data visualizations. Learn how to turn complex data into clear, engaging, and informative stories that drive decision-making.</p>
+                    <h3><a href="#">Interpretable AI: Peeking Inside the Black Box</a></h3>
+                    <p>An exploration of modern techniques like SHAP and LIME that help us understand and trust complex machine learning models. This article breaks down the concepts for both technical and non-technical audiences.</p>
+                    <div class="tags">
+                        <span class="tag">Explainable AI</span>
+                        <span class="tag">SHAP</span>
+                        <span class="tag">LIME</span>
+                        <span class="tag">Ethics in AI</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Get in Touch</h2>
+            <h2>Let's Connect</h2>
             <div class="section-content" style="text-align: center;">
-                <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to connect with me.</p>
+                <p>I'm always interested in new challenges and collaborations. Feel free to reach out for a conversation.</p>
                 <div class="social-links">
-                    <a href="#" target="_blank" title="GitHub">GH</a>
-                    <a href="#" target="_blank" title="LinkedIn">LI</a>
-                    <a href="#" target="_blank" title="Medium">M</a>
-                    <a href="#" target="_blank" title="Twitter">TW</a>
+                    <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+                    <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2025 Pratik. Crafted with passion and precision.</p>
+            <p>&copy; 2025 Pratik. All rights reserved.</p>
         </footer>
     </div>
 </body>
 </html>
+
