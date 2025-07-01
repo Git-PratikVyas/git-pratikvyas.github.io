@@ -69,30 +69,16 @@
         .section-content {
             margin-bottom: 70px;
         }
-        .project, .blog-post, .leadership-item, .expertise-item {
-            padding: 35px;
-            margin-bottom: 35px;
+        .expertise-summary {
+            padding: 25px;
             border-radius: 16px;
             background: #fdfdff;
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            line-height: 2;
         }
-        .project:hover, .blog-post:hover, .leadership-item:hover, .expertise-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
-        }
-        .project h3, .blog-post h3, .leadership-item h3, .expertise-item h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.6em;
-            margin: 0 0 20px;
-        }
-        .project a, .blog-post a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .project a:hover, .blog-post a:hover {
-            text-decoration: underline;
+        .expertise-summary p {
+            margin: 0;
         }
         .tags {
             margin-top: 25px;
@@ -107,6 +93,32 @@
             font-weight: 600;
             margin-right: 10px;
             margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+        }
+        tr:hover {
+            background-color: #fdfdff;
+        }
+        td a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        td a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
@@ -148,62 +160,105 @@
         <section id="expertise">
             <h2>Technical Expertise</h2>
             <div class="section-content">
-                <div class="expertise-item">
-                    <h3>Cloud & MLOps</h3>
-                    <p>Azure AI, Google Vertex AI, AWS Bedrock, AWS serverless Lambda, MLFlow, Kubernetes, LLMOps.</p>
+                <div class="expertise-summary">
+                    <p>
+                        <strong>Cloud & MLOps:</strong> Azure AI, Google Vertex AI, AWS Bedrock, Lambda, MLFlow, Kubernetes, LLMOps.
+                        <br>
+                        <strong>Large Language Models & Generative AI:</strong> Fine-tuning (LoRA, Prompt Tuning), RAG, VAE, vLLM, Ray, Langgraph, Crew.ai.
+                        <br>
+                        <strong>Natural Language Processing:</strong> Transformers, BERT, FinBERT, spaCy, NLTK, Hugging Face, Knowledge Graphs.
+                        <br>
+                        <strong>Machine Learning & Data Science:</strong> Scikit-learn, Flask, SHAP, LIME, Explainable AI (XAI), Inferential Statistics.
+                        <br>
+                        <strong>Big Data & Databases:</strong> Hadoop, Spark, Kafka, HBase, Cassandra, MS-SQL, Oracle.
+                    </p>
                 </div>
-                <div class="expertise-item">
-                    <h3>Large Language Models & Generative AI</h3>
-                    <p>Fine-tuning (LoRA, Prompt Tuning), Retrieval-Augmented Generation (RAG), VAE, Distributed Inference (vLLM), Distributed Training (RAY), Langgraph, Crew.ai.</p>
-                </div>
-                <div class="expertise-item">
-                    <h3>Natural Language Processing</h3>
-                    <p>Transformers, BERT, FinBERT, spaCy, NLTK, Hugging Face, Knowledge Graphs, Information Extraction, Text Summarization, and more.</p>
-                </div>
-                <div class="expertise-item">
-                    <h3>Machine Learning & Data Science</h3>
-                    <p>Supervised & Unsupervised Learning, Scikit-learn, Flask, SHAP, LIME, PDP, Explainable AI (XAI), Inferential Statistics, and more.</p>
-                </div>
-                 <div class="expertise-item">
-                    <h3>Big Data & Databases</h3>
-                    <p>Hadoop, Spark, Hive, Pig, Kafka, HBase, Cassandra, MS-SQL, Oracle.</p>
-                </div>
+            </div>
+        </section>
+
+        <section id="blogs">
+            <h2>Medium Blogs</h2>
+            <div class="section-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://medium.com/@pratik.vyas_10544/graph-rag-a-game-changer-for-llm-applications-2b26265c315a" target="_blank">Graph RAG: A Game-Changer for LLM Applications</a></td>
+                            <td>An overview of how Knowledge Graphs can be combined with Retrieval-Augmented Generation to make LLM applications more accurate and context-aware.</td>
+                            <td><span class="tag">Knowledge Graph</span><span class="tag">RAG</span><span class="tag">LLM</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://medium.com/@pratik.vyas_10544/multi-agent-systems-a-leap-forward-in-ai-collaboration-944925745525" target="_blank">Multi-Agent Systems: A Leap Forward in AI Collaboration</a></td>
+                            <td>Exploring the power of multi-agent systems using frameworks like Langgraph and Crew.ai to solve complex problems through collaboration.</td>
+                            <td><span class="tag">Agentic AI</span><span class="tag">Langgraph</span><span class="tag">Crew.ai</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="github-repos">
+            <h2>GitHub Repositories</h2>
+            <div class="section-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Repository</th>
+                            <th>Description</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Git-PratikVyas/Graph_RAG_financial_analysis" target="_blank">Graph RAG for Financial Analysis</a></td>
+                            <td>An implementation of a Graph RAG pipeline to analyze financial documents and answer complex questions.</td>
+                            <td><span class="tag">Python</span><span class="tag">Neo4j</span><span class="tag">Llama-Index</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/Git-PratikVyas/Multi-Agent-Crew.ai" target="_blank">Financial Analysis Multi-Agent System</a></td>
+                            <td>A multi-agent system for financial analysts using Crew.ai that automates data gathering, analysis, and report generation.</td>
+                            <td><span class="tag">Python</span><span class="tag">Crew.ai</span><span class="tag">Generative AI</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section id="projects">
             <h2>Signature Projects</h2>
             <div class="section-content">
-                <div class="project">
-                    <h3><a href="#">Multi-Agent System for Financial Analysis</a></h3>
-                    <p>Created a multi-agent system for financial analysts using Langgraph and Crew.ai. This system automates data gathering, analysis, and report generation, significantly improving efficiency.</p>
-                    <div class="tags">
-                        <span class="tag">Agentic AI</span>
-                        <span class="tag">Langgraph</span>
-                        <span class="tag">Crew.ai</span>
-                        <span class="tag">Generative AI</span>
-                    </div>
-                </div>
-                <div class="project">
-                    <h3><a href="#">RAG-based Form-10K Question-Answering</a></h3>
-                    <p>Developed a RAG-based solution using Llama-Index to answer questions from Form-10K documents, providing quick and accurate insights for financial analysts.</p>
-                    <div class="tags">
-                        <span class="tag">RAG</span>
-                        <span class="tag">Llama-Index</span>
-                        <span class="tag">Generative AI</span>
-                        <span class="tag">NLP</span>
-                    </div>
-                </div>
-                <div class="project">
-                    <h3><a href="#">NLP Chatbot for Airline Ticket Reservation</a></h3>
-                    <p>Created an NLP chatbot for airline ticket reservations, including sentimental analysis and topic modeling using LDA. This project improved customer experience and reduced support costs.</p>
-                    <div class="tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">Chatbot</span>
-                        <span class="tag">LDA</span>
-                        <span class="tag">Python</span>
-                    </div>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Description</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">Multi-Agent System for Financial Analysis</a></td>
+                            <td>Created a multi-agent system for financial analysts using Langgraph and Crew.ai. This system automates data gathering, analysis, and report generation, significantly improving efficiency.</td>
+                            <td><span class="tag">Agentic AI</span><span class="tag">Langgraph</span><span class="tag">Crew.ai</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">RAG-based Form-10K Question-Answering</a></td>
+                            <td>Developed a RAG-based solution using Llama-Index to answer questions from Form-10K documents, providing quick and accurate insights for financial analysts.</td>
+                            <td><span class="tag">RAG</span><span class="tag">Llama-Index</span><span class="tag">NLP</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">NLP Chatbot for Airline Ticket Reservation</a></td>
+                            <td>Created an NLP chatbot for airline ticket reservations, including sentimental analysis and topic modeling using LDA. This project improved customer experience and reduced support costs.</td>
+                            <td><span class="tag">NLP</span><span class="tag">Chatbot</span><span class="tag">Python</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -226,4 +281,3 @@
     </div>
 </body>
 </html>
-
